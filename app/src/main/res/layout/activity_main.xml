@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorButtonNormal"
+    tools:targetApi="lollipop">
+
+    <view
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:id="@+id/s_view"
+    android:background="@android:color/background_light"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    class="com.github.gcacace.signaturepad.views.SignaturePad"
+    android:layout_marginTop="48dp"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+    android:text="Распознать"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_ok"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:background="@color/colorPrimary"
+    android:textColor="@android:color/background_light"
+    android:textStyle="normal|bold"
+    android:fontFamily="sans-serif"
+    app:layout_constraintLeft_toLeftOf="@+id/s_view"
+    android:onClick="onClickBtnOk"
+    android:layout_marginTop="64dp"
+    app:layout_constraintTop_toBottomOf="@+id/s_view" />
+
+    <Button
+    android:text="Очистить"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_reset"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:background="@color/colorPrimary"
+    android:textColor="@android:color/background_light"
+    android:textStyle="normal|bold"
+    android:fontFamily="sans-serif"
+    app:layout_constraintTop_toBottomOf="@+id/btn_info"
+    app:layout_constraintLeft_toLeftOf="@+id/btn_info"
+    android:onClick="onClickBtnReset"
+    android:layout_marginTop="16dp" />
+
+    <Button
+    android:text="Подробнее"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_info"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:background="@color/colorPrimary"
+    android:textColor="@android:color/background_light"
+    android:textStyle="normal|bold"
+    android:fontFamily="sans-serif"
+    app:layout_constraintLeft_toLeftOf="@+id/btn_ok"
+    android:visibility="visible"
+    app:layout_constraintRight_toRightOf="@+id/btn_ok"
+    app:layout_constraintHorizontal_bias="0.0"
+    android:onClick="onClickBtnInfo"
+    app:layout_constraintTop_toBottomOf="@+id/btn_ok"
+    android:layout_marginTop="16dp" />
+
+</android.support.constraint.ConstraintLayout>
