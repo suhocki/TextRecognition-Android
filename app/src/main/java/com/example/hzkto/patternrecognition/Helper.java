@@ -21,6 +21,18 @@ public class Helper {
     private static int firstYCrop;
     private static int firstXCrop;
 
+    public static Zond getZ1() {
+        return z1;
+    }
+
+    public static Zond getZ2() {
+        return z2;
+    }
+
+    public static Zond getZ3() {
+        return z3;
+    }
+
     @NonNull
     public static String Recognize(SignaturePad sv) {
         if (sv.isEmpty()) {

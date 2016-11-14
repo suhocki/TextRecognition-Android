@@ -27,6 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.+'
     compile 'com.github.gcacace:signature-pad:1.2.0'
     compile 'com.android.support:support-v4:23.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta1'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
 }
