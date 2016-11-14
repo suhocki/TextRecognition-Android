@@ -118,6 +118,7 @@ public class Helper {
             if (z.yArray[i] >= 0 && z.xArray[i] >= 0) {
                 bmp.setPixel(z.xArray[i] + firstXCrop, z.yArray[i] + firstYCrop, Color.parseColor("#FFFF4081"));
                 if (res[z.xArray[i]][z.yArray[i]]) {
+                    bmp.setPixel(z.xArray[i] + firstXCrop, z.yArray[i] + firstYCrop, Color.GREEN);
                     if (!prevPixelWasBlack) {
                         z.cross++;
                         prevPixelWasBlack = true;

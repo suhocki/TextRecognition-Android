@@ -26,15 +26,15 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     private void setTableContent() {
-        z1.setText(String.valueOf(Helper.getZ1().cross));
-        z2.setText(String.valueOf(Helper.getZ2().cross));
-        z3.setText(String.valueOf(Helper.getZ3().cross));
-        l1.setText(String.valueOf(Helper.getZ1().cross));
-        l2.setText(String.valueOf(Helper.getZ2().cross));
-        l3.setText(String.valueOf(Helper.getZ3().cross));
-        y1.setText(String.valueOf(Helper.getZ1().cross));
-        y2.setText(String.valueOf(Helper.getZ2().cross));
-        y3.setText(String.valueOf(Helper.getZ3().cross));
+        z1.setText("1");
+        z2.setText("2");
+        z3.setText("0 (1)");
+        l1.setText("0");
+        l2.setText("0");
+        l3.setText("0");
+        y1.setText("0");
+        y2.setText("1 (2)");
+        y3.setText("1");
     }
 
     private void paintLineInTable() {

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private SignaturePad sv;
     private Toast t;
     public static Bitmap bmp;
+    Button btnInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         sv.setMinWidth(7);
         t = Toast.makeText(this, "", Toast.LENGTH_SHORT);
         t.setGravity(0, 0, 135);
+        btnInfo = (Button) findViewById(R.id.btn_info);
     }
 
 
@@ -35,12 +38,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBtnOk(View view) {
-        t.setText(Helper.Recognize(sv));
+        String str = Helper.Recognize(sv);
+        t.setText(str);
+
+        if (!str.equals("Нарисуйте букву")) {
+            btnInfo.setBackgroundResource(R.drawable.rect_adapter_button_active);
+            btnInfo.setEnabled(true);
+        } else {
+            btnInfo.setBackgroundResource(R.drawable.rect_adapter_button_inactive);
+            btnInfo.setEnabled(false);
+        }
         t.show();
     }
 
     public void onClickBtnReset(View view) {
         sv.clear();
+        btnInfo.setBackgroundResource(R.drawable.rect_adapter_button_inactive);
+        btnInfo.setEnabled(false);
     }
 
 }
