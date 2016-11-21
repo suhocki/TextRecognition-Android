@@ -50,7 +50,7 @@ public class InfoActivity extends AppCompatActivity {
             y2.setBackgroundResource(R.drawable.rect_adapter_green);
             y3.setBackgroundResource(R.drawable.rect_adapter_green);
         }
-        if (Helper.getZ3().cross == 0) {
+        if (Helper.getZ3().cross == 0  && Helper.getZ2().cross == 0 && Helper.getZ3().cross == 0) {
             l.setBackgroundResource(R.drawable.rect_adapter_green);
             l1.setBackgroundResource(R.drawable.rect_adapter_green);
             l2.setBackgroundResource(R.drawable.rect_adapter_green);
