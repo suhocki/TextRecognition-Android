@@ -1,0 +1,6 @@
+keystore pass:
+eRW0uF
+allias:
+awsmen
+password:
+eRW0uF
